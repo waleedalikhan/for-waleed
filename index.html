@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- BootStrap CSS -->
+    <link rel="stylesheet" href="./res/bootstrap.css">
+    
+    <!-- BootStrap Icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,600,700,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./res/sass/style.css" type="text/css">
+    <title>Food Website</title>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar bg-transparent px-5 py-3 align-items-center">
+        <img src="./res/img/lieferando.svg" alt="logo" class="img-fluid" style="max-height: 1.75rem;" />
+
+        <!-- Language dropdown -->
+        <div class="nav-wrapper d-md-block d-none ml-auto mr-4 mt-2">
+            <div class="sl-nav bg-white p-1 rounded-circle">
+                <ul>
+                    <li><i class="sl-flag flag-usa" aria-hidden="true"></i>
+                        <div class="triangle"></div>
+                        <ul>
+                            <li>
+                                <i class="sl-flag flag-usa">
+                                    <div id="germany"></div>
+                                </i>
+                                <span class="active">English</span>
+                            </li>
+                            <li>
+                                <i class="sl-flag flag-de">
+                                    <div id="germany"></div>
+                                </i>
+                                <span>Deutsch</span>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Language dropdown ends -->
+
+        <!-- Navbar Modal Toggler -->
+        <button type="button" href="#myModal" role="button" class="nav-btn" data-toggle="modal">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </button>
+        <!-- Navbar Modal Toggler ends -->
+
+        <!-- Navbar Modal -->
+        <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="container">
+                            <div class="row mt-4">
+                                <div class="col-3">
+                                    <img src="./res/img/profile.png" alt="profile" class="w-75">
+                                </div>
+                                <div class="ml-n5 col-9">
+                                    <h3 class="modal-title text-white font-weight-bold" id="myModalLabel">My
+                                        account</h3>
+                                    <a href="#" class="text-white">View personal data</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Login Modal Toggler -->
+                            <div class="col-6">
+                                <button type="button" href="#loginModal" class="btn btn-block btn-outline login-btn"
+                                    role="button" data-toggle="modal">Login</button>
+                            </div>
+                            <!-- Login Modal Toggler ends -->
+
+                            <!-- Registration Modal Toggler -->
+                            <div class="col-6">
+                                <button type="button" href="#signModal" class="btn btn-block btn-primary create-btn"
+                                    role="button" data-toggle="modal">Create
+                                    account</button>
+                            </div>
+                            <!-- Registration Modal Toggler -->
+                        </div>
+                        <div class="row mt-5 pt-4 pl-4 pr-4">
+                            <div class="col-12 border-bottom bg-white py-3 px-4">
+                                <a type="button" href="#orderModal" class="link" data-toggle="modal" role="button">
+                                    <i class="fas fa-shopping-bag mr-3"></i> Orders
+                                </a>
+                            </div>
+                            <div class="col-12 bg-white py-3 px-4">
+                                <a type="button" href="#favoritesModal" class="link" data-toggle="modal" role="button">
+                                    <i class="fas fa-heart mr-3"></i> Favourites
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-12 bg-white py-3 px-4 border-bottom">
+                                <a href="#" class="link">
+                                    <i class="far fa-star mr-3"></i> Loyalty shop
+                                </a>
+                            </div>
+                            <div class="col-12 bg-white py-3 px-4 border-bottom">
+                                <a href="#" class="link">
+                                    <i class="fas fa-percentage mr-3"></i> StampCard
+                                </a>
+                            </div>
+                            <div class="col-12 bg-white py-3 px-4 border-bottom">
+                                <a href="#" class="link">
+                                    <i class="fas fa-info-circle mr-3"></i> Need help?
+                                </a>
+                            </div>
+                            <div class="col-12 bg-white py-3 px-4 border-bottom">
+                                <a href="#" class="link">
+                                    <i class="far fa-building mr-3"></i> Takeway Pay
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Navbar Modal ends -->
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal modal-child" data-backdrop-limit="1" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true" data-modal-parent="#myModal">
+            <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="modal-title">Sign in</h4>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#" class="btn btn-block login-btn p-3 mb-5">Login with FaceBook</a>
+                                <p class="or mb-4">or</p>
+                                <div class="form-group mb-5">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control mb-3" required>
+                                    <a href="#" class="pass-link text-right mt-3">Forgot password?</a>
+                                </div>
+                                <button type="submit" href="#" class="btn btn-block login-btn2 p-3 mb-3">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="pass-link text-center mb-2">Create Account</a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Login Modal ends -->
+
+        <!-- Signup Modal -->
+        <div id="signModal" class="modal modal-child" data-backdrop-limit="1" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true" data-modal-parent="#myModal">
+            <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="modal-title">Register</h4>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#" class="btn btn-block login-btn p-3 mb-5">Login with FaceBook</a>
+                                <p class="or mb-4">or</p>
+                                <div class="form-group mb-5">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control mb-3" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label for="password">Re-enter Password</label>
+                                    <input type="password" class="form-control mb-3" required>
+                                </div>
+                                <button type="submit" href="#" class="btn btn-block login-btn2 p-3">Send</button>
+                                <p class="caption mb-2">By clicking on send you accept the <a href="#">terms of use</a>
+                                    and the <a href="#">terms of use of the Loyalty Shop</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="pass-link text-center mb-3">I have an account</a>
+                </div>
+            </div>
+        </div>
+        <!-- Signup Modal ends -->
+
+        <!-- order Modal -->
+        <div id="orderModal" class="modal modal-child" data-backdrop-limit="1" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true" data-modal-parent="#myModal">
+            <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="modal-title text-center">Register</h4>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body align-items-center">
+                        <div class="row mt-5">
+                            <div class="col-12 text-center">
+                                <i class="fas fa-shopping-bag fa-3x my-4"></i>
+                                <h4 class="my-4">No orders yet</h4>
+                                <p class="my-4" style="color: #7d7d7d;">You have no order history available</p>
+                                <button type="submit" href="#" class="btn d-block login-btn2 mx-auto">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- order Modal ends -->
+
+        <!-- Favourites Modal -->
+        <div id="favoritesModal" class="modal modal-child" data-backdrop-limit="1" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true" data-modal-parent="#myModal">
+            <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="modal-title text-center">Register</h4>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body align-items-center">
+                        <div class="row mt-5">
+                            <div class="col-12 text-center">
+                                <i class="fas fa-heart fa-3x my-4"></i>
+                                <h4 class="my-4">No favourite restaurants</h4>
+                                <p class="my-4" style="color: #7d7d7d;">You currently don't have any favourite
+                                    restaurants</p>
+                                <button type="submit" href="#" class="btn d-block login-btn2 mx-auto">Browse
+                                    Restaurants</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Favourites Modal ends -->
+    </nav>
+    <!-- Navbar ends -->
+
+    <!-- Header -->
+    <header id="header" class="mt-n5">
+        <div class="bg-img-overlay">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-12 text-center text-white">
+                        <h1 class="display-3 banner-h font-weight-bold">Time to
+                            order food</h1>
+                        <h3 class="mb-3">Find restaurants in your area</h3>
+                        <div class="input-group input-group-lg mx-auto">
+                            <i class="fas fa-map-marker-alt fa-1x pin p-3 align-self-center"></i>
+                            <input type="text" class="form-control">
+                            <div class="input-group-prepend">
+                                <span class="btn btn-primary btn-show font-weight-bold">Show</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Back to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fas fa-angle-up fa-2x"></i>
+    </button>
+    <!-- Back to top button ends -->
+
+    <!-- How it works -->
+    <section class="bg-white work">
+        <div class="container my-4">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="mb-3">How it works</h2>
+                    <h1 class="easy mb-3">Easy as that!</h1>
+                </div>
+            </div>
+            <div class="row text-center my-5 align-items-center d-lg-flex d-none">
+                <div class="col-md-4 text-center">
+                    <img src="./res/img/location.png" alt="map-marker" class="img-fluid img" width="100">
+                    <h5 class="my-4 font-weight-bold">Enter your location</h5>
+                    <p>Enter your street address or let us find your location</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="./res/img/junk.png" alt="junkfood" class="img-fluid img" width="100">
+                    <h5 class="my-4 font-weight-bold">Choose your restaurant and food</h5>
+                    <p>What do you fancy? Browse through countless menus and reviews</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="./res/img/delivery.png" alt="map-marker" class="img-fluid img" width="100">
+                    <h5 class="my-4 font-weight-bold">Pay and get your food delivered</h5>
+                    <p>Pay cash or online with Creditcard, Klarna, PayPal, Bitcoin. Bon appetit!</p>
+                </div>
+            </div>
+            <div class="row d-lg-none d-block">
+                <div class="col-md-6 mx-auto">
+                    <div class="carousel slide" data-ride="carousel" id="steps-carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#steps-carousel" data-slide-to="0"></li>
+                            <li data-target="#steps-carousel" data-slide-to="1"></li>
+                            <li data-target="#steps-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active text-center">
+                                <img src="./res/img/location.png" alt="map-marker" class="img-fluid" width="100">
+                                <h5 class="my-4 font-weight-bold">Enter your location</h5>
+                                <p>Enter your street address or let us find your location</p>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="./res/img/junk.png" alt="junkfood" class="img-fluid" width="100">
+                                <h5 class="my-4 font-weight-bold">Choose your restaurant and food</h5>
+                                <p>What do you fancy? Browse through countless menus and reviews</p>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="./res/img/delivery.png" alt="map-marker" class="img-fluid" width="100">
+                                <h5 class="my-4 font-weight-bold">Pay and get your food delivered</h5>
+                                <p>Pay cash or online with Creditcard, Klarna, PayPal, Bitcoin. Bon appetit!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#steps-carousel" role="button" data-slide="prev">
+                        <span class="fas fa-angle-left fa-2x" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#steps-carousel" role="button" data-slide="next">
+                        <span class="fas fa-angle-right fa-2x" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How it works ends -->
+
+    <!-- Your time -->
+    <section class="time py-4">
+        <div class="container my-4">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="mb-4">Lieferando.de</h2>
+                    <h1 class="easy">Your time</h1>
+                </div>
+            </div>
+            <div class="row mx-auto d-xl-flex d-none justify-content-center align-items-center">
+                <div class="col-md-4">
+                    <div class="container-card">
+                        <img src="./res/img/bonus.png" alt="" width="200">
+                        <h2 class="mb-4">Your Bonus</h2>
+                        <div class="row mb-2">
+                            <div class="col-2">
+                                <i class="fas fa-check" style="color: #f36f37;"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="text-left"><a href="#">Our loyalty shop programme:</a> discover many discounts
+                                    and
+                                    prizes</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-check" style="color: #f36f37;"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="text-left">Receive stamps, promotions, discounts, news and more,
+                                    via our newsletters and social channels</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="container-card">
+                        <img src="./res/img/guarantee.png" alt="" width="250">
+                        <h2 class="mb-4">Your Guarantee</h2>
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <i class="fas fa-check" style="color: #f36f37;"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="text-left">Excellent service for free</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-check" style="color: #f36f37;"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="text-left">Authentic user reviews</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-check" style="color: #f36f37;"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="text-left"><a href="#">Price guarantee</a>: you pay just as much for your
+                                    delivered meal, as you would pay when ordering directly from the restaurant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="container-card">
+                        <img src="./res/img/benifits.png" alt="" width="250">
+                        <h2 class="mb-4">Your Benifits</h2>
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <i class="fas fa-check" style="color: #f36f37;"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="text-left">15,000+ partner restaurant to choose from</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-check" style="color: #f36f37;"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="text-left">Pay cash or online</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-check" style="color: #f36f37;"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="text-left">Order anytime, anywhere, on any device</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-xl-none d-block justify-content-center align-items-center">
+                <div class="col-md-6 mx-auto">
+                    <div class="carousel slide" data-ride="carousel" id="time-carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#time-carousel" data-slide-to="0"></li>
+                            <li data-target="#time-carousel" data-slide-to="1"></li>
+                            <li data-target="#time-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active text-center">
+                                <div class="container-card">
+                                    <img src="./res/img/guarantee.png" alt="" width="250">
+                                    <h2 class="mb-4">Your Guarantee</h2>
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left">Excellent service for free</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left">Authentic user reviews</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left"><a href="#">Price guarantee</a>: you pay just as
+                                                much for your
+                                                delivered meal, as you would pay when ordering directly from the
+                                                restaurant</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <div class="container-card">
+                                    <img src="./res/img/benifits.png" alt="" width="250">
+                                    <h2 class="mb-4">Your Benifits</h2>
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left">15,000+ partner restaurant to choose from</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left">Pay cash or online</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left">Order anytime, anywhere, on any device</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <div class="container-card">
+                                    <img src="./res/img/benifits.png" alt="" width="250">
+                                    <h2 class="mb-4">Your Benifits</h2>
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left">15,000+ partner restaurant to choose from</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left">Pay cash or online</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-check" style="color: #f36f37;"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="text-left">Order anytime, anywhere, on any device</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#time-carousel" role="button" data-slide="prev">
+                        <span class="fas fa-angle-left fa-2x text-white" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#time-carousel" role="button" data-slide="next">
+                        <span class="fas fa-angle-right fa-2x text-white" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Your time ends -->
+
+    <!-- More -->
+    <section class="more">
+        <div class="container p-4">
+            <div class="row p-4 align-items-center">
+                <div class="col-md-6 mb-5 text-md-left text-center">
+                    <h3>Want more?</h3>
+                    <h4 class="mb-4">Check out exciting news about food and lifestyle on our blog</h4>
+                    <a href="#">> Visit the blog</a>
+                </div>
+                <div class="col-md-6 mt-5  text-md-right text-center">
+                    <img src="./res/img/blog.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- More ends -->
+
+    <!-- Footer -->
+    <footer class="footer p-md-4 py-5">
+        <div class="container-fluid">
+            <div class="col-12 text-center my-4">
+                <a href="#">
+                    <img src="./res/img/lieferando.svg" alt="brand logo" class="img-fluid" width="400">
+                </a>
+            </div>
+            <div class="row my-5 d-md-flex d-none align-items-center mx-auto px-4">
+                <div class="col-md-3 my-2">
+                    <a href="#" class="text-white font-weight-bold d-block mb-5">Item-1</a>
+                    <a href="#" class="text-white d-block mb-5">link-1</a>
+                    <a href="#" class="text-white d-block mb-5">link-2</a>
+                    <a href="#" class="text-white d-block mb-5">link-3</a>
+                    <a href="#" class="text-white d-block mb-5">link-4</a>
+                </div>
+                <div class="col-md-3 my-2">
+                    <a href="#" class="text-white font-weight-bold d-block mb-5">Item-2</a>
+                    <a href="#" class="text-white d-block mb-5">link-1</a>
+                    <a href="#" class="text-white d-block mb-5">link-2</a>
+                    <a href="#" class="text-white d-block mb-5">link-3</a>
+                    <a href="#" class="text-white d-block mb-5">link-4</a>
+                </div>
+                <div class="col-md-3 my-2">
+                    <a href="#" class="text-white font-weight-bold d-block mb-5">Item-3</a>
+                    <a href="#" class="text-white d-block mb-5">link-1</a>
+                    <a href="#" class="text-white d-block mb-5">link-2</a>
+                    <a href="#" class="text-white d-block mb-5">link-3</a>
+                    <a href="#" class="text-white d-block mb-5">link-4</a>
+                </div>
+                <div class="col-md-3 mt-2">
+                    <a href="#" class="text-white font-weight-bold d-block mb-5">Item-4</a>
+                    <a href="#" class="text-white d-block mb-5">link-1</a>
+                    <a href="#" class="text-white d-block mb-5">link-2</a>
+                    <a href="#" class="text-white d-block mb-5">link-3</a>
+                    <a href="#" class="text-white d-block mb-5">link-4</a>
+                </div>
+            </div>
+            <div class="row d-md-flex d-none px-5">
+                <div class="col-6">
+                    <a href="#" class="text-white font-weight-bold d-block mb-5">Follow us</a>
+                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-facebook fa-2x mr-3"></i>
+                        Facebook</a>
+                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-twitter fa-2x mr-3"></i>
+                        Twitter</a>
+                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-instagram fa-2x mr-3"></i>
+                        Instagram</a>
+                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-youtube fa-2x mr-3"></i>
+                        Youtube</a>
+                </div>
+            </div>
+            <div class="row text-center d-md-none d-flex">
+                <div class="col-12">
+                    <h5 href="#" class="text-white font-weight-bold d-block mb-5">Follow us</h5>
+                </div>
+                <div class="col-3">
+                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-facebook fa-2x mr-3"></i></a>
+                </div>
+                <div class="col-3">
+                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-twitter fa-2x mr-3"></i></a>
+                </div>
+                <div class="col-3">
+                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-instagram fa-2x mr-3"></i></a>
+                </div>
+                <div class="col-3">
+                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-youtube fa-2x mr-3"></i></a>
+                </div>
+            </div>
+            <div class="row d-md-none d-block">
+                <div class="col-12">
+                    <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel my-4">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        item #1
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                aria-labelledby="headingOne">
+                                <div class="panel-body my-4 text-white">
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-1</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-2</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-3</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-4</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of panel -->
+
+                        <div class="panel my-4">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                        href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        item #2
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                aria-labelledby="headingTwo">
+                                <div class="panel-body my-4 text-white">
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-1</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-2</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-3</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-4</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of panel -->
+
+                        <div class="panel my-4">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                        href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        item #3
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                aria-labelledby="headingThree">
+                                <div class="panel-body my-4 text-white">
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-1</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-2</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-3</a>
+                                    <a href="#" class="text-white d-block ml-3 mb-5">link-4</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of panel -->
+
+                        <div class="panel my-4">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                        href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        item #4
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                                aria-labelledby="headingFour">
+                                <div class="panel-body my-4 text-white">
+                                    <a href="#" class="text-white ml-3 d-block mb-5">link-1</a>
+                                    <a href="#" class="text-white ml-3 d-block mb-5">link-2</a>
+                                    <a href="#" class="text-white ml-3 d-block mb-5">link-3</a>
+                                    <a href="#" class="text-white ml-3 d-block mb-5">link-4</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of panel -->
+
+                    </div>
+                    <!-- end of #accordion -->
+
+                </div>
+                <!-- end of wrap -->
+            </div>
+        </div>
+    </footer>
+    <!-- Footer ends -->
+
+    <!-- jQuery -->
+    <script src="./res/jquery-3.4.1.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="./res/bootstrap.bundle.js" type="text/javascript"></script>
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/2def6b71ee.js" crossorigin="anonymous" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="./res/js/index.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,492 @@
+// ? Navbar
+.navbar {
+  .address-btn {
+    background: transparent;
+    color: #fff;
+    padding-bottom: 2px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    font-weight: 700;
+  }
+  #myModal3 {
+    .modal-dialog {
+      width: $modal-width;
+      height: 500px !important;
+      .modal-content {
+        background: #fff;
+        border: 0;
+        border-radius: 0;
+        .modal-body {
+          .input-group {
+            width: 80%;
+            .pin {
+              background: #fff;
+              color: #d7d7d7;
+              border-right: 0 !important;
+              outline: none;
+              border-top: 1px solid #e7e7e7;
+              border-bottom: 1px solid #e7e7e7;
+              border-left: 1px solid #e7e7e7;
+              padding-bottom: 10px;
+            }
+            .address-form {
+              border: 0 !important;
+              border-radius: 0;
+              border-top: 1px solid #e7e7e7 !important;
+              border-bottom: 1px solid #e7e7e7 !important;
+              box-shadow: none;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .navbar {
+    .address-btn {
+      background: transparent;
+      color: #fff;
+      padding-bottom: 10px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      border-radius: 0;
+      outline: none;
+      font-size: 10px;
+      box-shadow: none;
+      font-weight: 700;
+    }
+  }
+  #myModal3 {
+    .modal-dialog {
+      width: 400px !important;
+      .input-group {
+        input::placeholder {
+          font-size: 13px;
+        }
+        .pin {
+          padding-bottom: 14px !important;
+        }
+      }
+    }
+  }
+}
+
+// ? Navbar ends
+
+// * sidebar
+.sidenav {
+  height: 100%;
+  width: 320px;
+  position: fixed;
+  z-index: 666;
+  background: #fff;
+  right: 0;
+  box-shadow: 0px 10px 5px 1px rgba($color: #666, $alpha: 0.4);
+  padding-top: 20px;
+}
+// * sidebar ends
+
+// ! Header
+.pizza-header {
+  height: 30vh;
+  background: url(../img/generic.jpg
+  ) center / cover no-repeat;
+  position: relative;
+  margin-right: 320px;
+}
+@media only screen and (max-width: 1024px) {
+  .pizza-header {
+    margin: 0 !important;
+    height: 20vh;
+    position: relative;
+    margin-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .pizza-header {
+    margin: 0 !important;
+    height: 20vh;
+    position: relative;
+    margin-right: 400px;
+  }
+}
+// ! Header ends
+
+// ? Food item
+.item {
+  margin-right: 400px;
+  .restaurant-logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .logo-container {
+      height: 137px;
+      width: 137px;
+      top: -95px;
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      .logo-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid #d7d7d7;
+        background: #fff;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        left: -50%;
+        position: relative;
+      }
+    }
+  }
+  .heart-color {
+    color: #f37f36;
+  }
+  #info {
+    box-shadow: none !important;
+    outline: none !important;
+    margin-right: -4px;
+    padding-top: 0.9rem !important;
+    padding-bottom: 0.9rem !important;
+    &:focus {
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }
+  #heart {
+    box-shadow: none !important;
+    outline: none !important;
+    padding-top: 0.99rem !important;
+    padding-bottom: 1rem !important;
+    &:focus {
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }
+  .ria-para {
+    font-size: 15.5px;
+    line-height: 27px;
+    font-weight: 400;
+    color: rgb(102, 102, 102);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .item {
+    margin-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .item {
+    margin-right: 0 !important;
+    .heading {
+      font-size: 20px !important;
+    }
+    .star {
+      font-size: 18px !important;
+    }
+    .reviews {
+      font-size: 12px !important;
+    }
+    p {
+      font-size: 12px !important;
+      font-weight: 700;
+      color: #000;
+    }
+    .info {
+      font-size: 14px !important;
+    }
+    .heart {
+      font-size: 14px !important;
+    }
+    .restaurant-logo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .logo-container {
+        height: 90px;
+        width: 90px;
+        top: -70px;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        .logo-inner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          border: 1px solid #d7d7d7;
+          background: #fff;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          left: -50%;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 385px) {
+  .item {
+    margin-right: 0 !important;
+    .heading {
+      font-size: 17px !important;
+    }
+    .star {
+      font-size: 14px !important;
+    }
+    .reviews {
+      font-size: 10px !important;
+    }
+    p {
+      font-size: 12px !important;
+      line-height: 1rem !important;
+      font-weight: 700;
+      color: #000;
+    }
+    .restaurant-logo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .logo-container {
+        height: 80px;
+        width: 80px;
+        top: -65px;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        .logo-inner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          border: 1px solid #d7d7d7;
+          background: #fff;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          left: -50%;
+          text-align: center;
+          position: relative;
+          img {
+            position: relative;
+            left: 0 !important;
+          }
+        }
+      }
+    }
+    #info {
+      box-shadow: none !important;
+      outline: none !important;
+      margin-right: -4px;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+    }
+    #heart {
+      box-shadow: none !important;
+      outline: none !important;
+      padding-top: 0.49rem !important;
+      padding-bottom: 0.5rem !important;
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .item {
+    margin-right: 0 !important;
+    .heading {
+      font-size: 17px !important;
+    }
+    .star {
+      font-size: 14px !important;
+    }
+    .reviews {
+      font-size: 8px !important;
+    }
+    p {
+      font-size: 12px !important;
+      line-height: 1rem !important;
+      font-weight: 700;
+      color: #000;
+    }
+    .restaurant-logo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .logo-container {
+        height: 80px;
+        width: 80px;
+        top: -65px;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        .logo-inner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          border: 1px solid #d7d7d7;
+          background: #fff;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          left: -50%;
+          text-align: center;
+          position: relative;
+          img {
+            position: relative;
+            left: 0 !important;
+          }
+        }
+      }
+    }
+    #info {
+      box-shadow: none !important;
+      outline: none !important;
+      margin-right: -4px;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+    }
+    #heart {
+      box-shadow: none !important;
+      outline: none !important;
+      padding-top: 0.49rem !important;
+      padding-bottom: 0.5rem !important;
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+    }
+  }
+}
+// ? Food item ends
+
+// ! Dish navbar
+#mainNav {
+  margin-right: 320px;
+  background: #f8f5f2;
+  .product-link {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 300;
+    height: 26px;
+    padding: 2px 19px 0;
+    font-family: Roboto Slab, Arial, serif;
+    color: #0a3847;
+    text-overflow: unset;
+    width: auto;
+    text-decoration: none;
+  }
+  .active {
+    color: #f37f36;
+  }
+}
+// ! Dish navbar ends
+
+.active-tab {
+  border-bottom: 2px solid #f37f36;
+}
+
+// ! footer
+.footer {
+  background: #0e3847;
+  .panel {
+    border-bottom: 1px solid #fff;
+  }
+
+  .panel-title a {
+    display: block;
+    color: #fff;
+    padding: 15px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  /* #bs-collapse icon scale option */
+
+  .panel-heading a:before {
+    content: "\e146";
+    position: absolute;
+    font-family: "Material Icons";
+    right: 5px;
+    top: 10px;
+    font-size: 24px;
+    transform: scale(1);
+  }
+
+  .panel-heading.active a:before {
+    content: " ";
+    transition: all 0.5s;
+    transform: scale(0);
+  }
+
+  #bs-collapse .panel-heading a:after {
+    content: " ";
+    font-size: 24px;
+    position: absolute;
+    font-family: "Material Icons";
+    right: 5px;
+    top: 10px;
+    transform: scale(0);
+  }
+
+  #bs-collapse .panel-heading.active a:after {
+    content: "\e909";
+    transform: scale(1);
+    transition: all 0.5s;
+  }
+  /* #accordion rotate icon option */
+
+  #accordion .panel-heading a:before {
+    content: "\e316";
+    font-size: 24px;
+    position: absolute;
+    font-family: "Material Icons";
+    right: 5px;
+    top: 10px;
+    transform: rotate(180deg);
+    transition: all 0.5s;
+  }
+
+  #accordion .panel-heading.active a:before {
+    transform: rotate(0deg);
+    transition: all 0.5s;
+  }
+}
+// ! footer ends
+
+.mr {
+  margin-right: 320px;
+}
+
+@media only screen and (max-width: 991px) {
+  .mr {
+    margin-right: 0 !important;
+  }
+}
