@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- BootStrap CSS -->
+    <link rel="stylesheet" href="./res/bootstrap.css" />
+    <!-- BootStrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,600,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="./swiper.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./res/sass/style.css" />
+    <title>Food Website</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-transparent px-5 py-3 align-items-center">
+      <img
+        src="./res/img/lieferando.svg"
+        alt="logo"
+        class="img-fluid"
+        style="max-height: 1.75rem;"
+      />
+
+      <!-- Language dropdown -->
+      <div class="nav-wrapper d-lg-block d-none ml-auto mr-4 mt-2">
+        <div class="sl-nav bg-white p-1 rounded-circle">
+          <ul>
+            <li>
+              <i class="sl-flag flag-usa" aria-hidden="true"></i>
+              <div class="triangle"></div>
+              <ul>
+                <li>
+                  <i class="sl-flag flag-usa">
+                    <div id="germany"></div>
+                  </i>
+                  <span class="active">English</span>
+                </li>
+                <li>
+                  <i class="sl-flag flag-de">
+                    <div id="germany"></div>
+                  </i>
+                  <span>Deutsch</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Language dropdown ends -->
+
+      <!-- Navbar Modal Toggler -->
+      <button
+        type="button"
+        href="#myModal"
+        role="button"
+        class="nav-btn"
+        data-toggle="modal"
+      >
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+      <!-- Navbar Modal Toggler ends -->
+
+      <!-- Navbar Modal -->
+      <div
+        id="myModal"
+        class="modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container">
+                <div class="row mt-4">
+                  <div class="col-3">
+                    <img
+                      src="./res/img/profile.png"
+                      alt="profile"
+                      class="w-75"
+                    />
+                  </div>
+                  <div class="ml-n5 col-9">
+                    <h3
+                      class="modal-title text-white font-weight-bold"
+                      id="myModalLabel"
+                    >
+                      My account
+                    </h3>
+                    <a href="#" class="text-white">View personal data</a>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <!-- Login Modal Toggler -->
+                <div class="col-6">
+                  <button
+                    type="button"
+                    href="#loginModal"
+                    class="btn btn-block btn-outline login-btn"
+                    role="button"
+                    data-toggle="modal"
+                  >
+                    Login
+                  </button>
+                </div>
+                <!-- Login Modal Toggler ends -->
+
+                <!-- Registration Modal Toggler -->
+                <div class="col-6">
+                  <button
+                    type="button"
+                    href="#signModal"
+                    class="btn btn-block btn-primary create-btn"
+                    role="button"
+                    data-toggle="modal"
+                  >
+                    Create account
+                  </button>
+                </div>
+                <!-- Registration Modal Toggler -->
+              </div>
+              <div class="row mt-5 pt-4 pl-4 pr-4">
+                <div class="col-12 border-bottom bg-white py-3 px-4">
+                  <a
+                    type="button"
+                    href="#orderModal"
+                    class="link"
+                    data-toggle="modal"
+                    role="button"
+                  >
+                    <i class="fas fa-shopping-bag mr-3"></i> Orders
+                  </a>
+                </div>
+                <div class="col-12 bg-white py-3 px-4">
+                  <a
+                    type="button"
+                    href="#favoritesModal"
+                    class="link"
+                    data-toggle="modal"
+                    role="button"
+                  >
+                    <i class="fas fa-heart mr-3"></i> Favourites
+                  </a>
+                </div>
+              </div>
+              <div class="row p-4">
+                <div class="col-12 bg-white py-3 px-4 border-bottom">
+                  <a href="#" class="link">
+                    <i class="far fa-star mr-3"></i> Loyalty shop
+                  </a>
+                </div>
+                <div class="col-12 bg-white py-3 px-4 border-bottom">
+                  <a href="#" class="link">
+                    <i class="fas fa-percentage mr-3"></i> StampCard
+                  </a>
+                </div>
+                <div class="col-12 bg-white py-3 px-4 border-bottom">
+                  <a href="#" class="link">
+                    <i class="fas fa-info-circle mr-3"></i> Need help?
+                  </a>
+                </div>
+                <div class="col-12 bg-white py-3 px-4 border-bottom">
+                  <a href="#" class="link">
+                    <i class="far fa-building mr-3"></i> Takeway Pay
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar Modal ends -->
+
+      <!-- Login Modal -->
+      <div
+        id="loginModal"
+        class="modal modal-child"
+        data-backdrop-limit="1"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+        data-modal-parent="#myModal"
+      >
+        <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div class="row">
+                <div class="col-12">
+                  <h4 class="modal-title">Sign in</h4>
+                </div>
+              </div>
+              <button type="button" class="close" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12">
+                  <a href="#" class="btn btn-block login-btn p-3 mb-5"
+                    >Login with FaceBook</a
+                  >
+                  <p class="or mb-4">or</p>
+                  <div class="form-group mb-5">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" required />
+                  </div>
+                  <div class="form-group mb-5">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control mb-3" required />
+                    <a href="#" class="pass-link text-right mt-3"
+                      >Forgot password?</a
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    href="#"
+                    class="btn btn-block login-btn2 p-3 mb-3"
+                  >
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="pass-link text-center mb-2">Create Account</a>
+          </div>
+        </div>
+      </div>
+      <!-- Login Modal ends -->
+
+      <!-- Signup Modal -->
+      <div
+        id="signModal"
+        class="modal modal-child"
+        data-backdrop-limit="1"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+        data-modal-parent="#myModal"
+      >
+        <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div class="row">
+                <div class="col-12">
+                  <h4 class="modal-title">Register</h4>
+                </div>
+              </div>
+              <button type="button" class="close" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12">
+                  <a href="#" class="btn btn-block login-btn p-3 mb-5"
+                    >Login with FaceBook</a
+                  >
+                  <p class="or mb-4">or</p>
+                  <div class="form-group mb-5">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" required />
+                  </div>
+                  <div class="form-group mb-5">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" required />
+                  </div>
+                  <div class="form-group mb-5">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control mb-3" required />
+                  </div>
+                  <div class="form-group mb-5">
+                    <label for="password">Re-enter Password</label>
+                    <input type="password" class="form-control mb-3" required />
+                  </div>
+                  <button
+                    type="submit"
+                    href="#"
+                    class="btn btn-block login-btn2 p-3"
+                  >
+                    Send
+                  </button>
+                  <p class="caption mb-2">
+                    By clicking on send you accept the
+                    <a href="#">terms of use</a> and the
+                    <a href="#">terms of use of the Loyalty Shop</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="pass-link text-center mb-3">I have an account</a>
+          </div>
+        </div>
+      </div>
+      <!-- Signup Modal ends -->
+
+      <!-- order Modal -->
+      <div
+        id="orderModal"
+        class="modal modal-child"
+        data-backdrop-limit="1"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+        data-modal-parent="#myModal"
+      >
+        <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div class="row">
+                <div class="col-12">
+                  <h4 class="modal-title text-center">Register</h4>
+                </div>
+              </div>
+              <button type="button" class="close" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body align-items-center">
+              <div class="row mt-5">
+                <div class="col-12 text-center">
+                  <i class="fas fa-shopping-bag fa-3x my-4"></i>
+                  <h4 class="my-4">No orders yet</h4>
+                  <p class="my-4" style="color: #7d7d7d;">
+                    You have no order history available
+                  </p>
+                  <button
+                    type="submit"
+                    href="#"
+                    class="btn d-block login-btn2 mx-auto"
+                  >
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- order Modal ends -->
+
+      <!-- Favourites Modal -->
+      <div
+        id="favoritesModal"
+        class="modal modal-child"
+        data-backdrop-limit="1"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+        data-modal-parent="#myModal"
+      >
+        <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div class="row">
+                <div class="col-12">
+                  <h4 class="modal-title text-center">Register</h4>
+                </div>
+              </div>
+              <button type="button" class="close" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body align-items-center">
+              <div class="row mt-5">
+                <div class="col-12 text-center">
+                  <i class="fas fa-heart fa-3x my-4"></i>
+                  <h4 class="my-4">No favourite restaurants</h4>
+                  <p class="my-4" style="color: #7d7d7d;">
+                    You currently don't have any favourite restaurants
+                  </p>
+                  <button
+                    type="submit"
+                    href="#"
+                    class="btn d-block login-btn2 mx-auto"
+                  >
+                    Browse Restaurants
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Favourites Modal ends -->
+    </nav>
+    <!-- Navbar ends -->
+
+    <!-- Header -->
+    <header id="header-s">
+      <div class="container">
+        <div class="row container-hs pt-5">
+          <div class="col-12 text-center text-white">
+            <h1 class="banner-hs font-weight-bold mb-3">Order takeaway in</h1>
+            <div class="input-group input-group-lg mx-auto">
+              <i
+                class="fas fa-map-marker-alt fa-1x pin p-3 align-self-center"
+              ></i>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Address, i.e. KirchstraBe 1"
+              />
+              <div class="input-group-prepend">
+                <span class="btn btn-primary btn-show font-weight-bold"
+                  >Show</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Small devices Nav -->
+    <section class="small-nav d-lg-none d-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 my-2">
+            <h1 class="side-h">MY ACCOUNT</h1>
+          </div>
+          <div class="col-12">
+              <ul class="acc">
+                <li>
+                  <button class="acc_ctrl"><h2 style="letter-spacing: 0 !important;">navigation/start</h2></button>
+                  <div class="small-panel">
+                    <div class="acc_panel">
+                      <a href="./start.html" class="mb-1 mt-2 mr-4">Start</a>
+                      <a href="./order.html" class="mb-1 mt-2 mr-4 active-link1">Orders</a>
+                      <a href="./address.html" class="mb-1 mr-4">Addresses</a>
+                      <a href="./personal.html" class="mb-1 mr-4">Personal data</a>
+                      <a href="./password.html" class="mr-2 mb-1">Change password</a>
+                      <a href="#" class="mr-1">Logout</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="row" style="height: 30vh;">
+            <div class="col-12">
+                <h2 class="small-h">Orders</h2>
+                <p class="small-p">You have not ordered anything yet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Small devices nav ends -->
+
+    <div class="start-container d-lg-block d-none">
+      <!-- Sidenav -->
+      <div class="sidebar d-md-block d-none">
+        <h1 class="side-h">MY ACCOUNT</h1>
+        <a href="./start.html" class="mb-2 mt-4 mr-4">Start</a>
+        <a href="./order.html" class="mb-1 mt-2 mr-4 active-link">Orders</a>
+        <a href="./address.html" class="mb-2 mr-4">Addresses</a>
+        <a href="./personal.html" class="mb-2 mr-4">Personal data</a>
+        <a href="./password.html" class="mr-4 mb-2">Change password</a>
+        <a href="#" class="mr-4">Logout</a>
+      </div>
+      <!-- Sidenav ends -->
+
+      <!-- Side section -->
+      <div class="main d-md-block d-none">
+        <h2>Orders</h2>
+        <p>You have not ordered anything yet</p>
+      </div>
+      <!-- side section ends -->
+    </div>
+    <!-- Footer -->
+    <footer class="footer px-4 pt-4 pb-2">
+      <div class="container-fluid pt-4">
+        <div class="row justify-content-center align-items-center">
+          <ul style="list-style: none; text-align: center;">
+            <li
+              class="d-md-inline-block d-block mb-4"
+              style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;"
+            >
+              <a href="#" style="color: #fff;">Recommend a restaurant</a>
+            </li>
+            <li
+              class="d-md-inline-block d-block mb-4"
+              style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;"
+            >
+              <a href="#" style="color: #fff;">Signup a restaurant</a>
+            </li>
+            <li
+              class="d-md-inline-block d-block mb-4"
+              style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;"
+            >
+              <a href="#" style="color: #fff;">Jobs</a>
+            </li>
+            <li
+              class="d-md-inline-block d-block mb-4"
+              style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;"
+            >
+              <a href="#" style="color: #fff;">Terms of use</a>
+            </li>
+            <li
+              class="d-md-inline-block d-block mb-4"
+              style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;"
+            >
+              <a href="#" style="color: #fff;">Privacy statement</a>
+            </li>
+            <li
+              class="d-md-inline-block d-block mb-4"
+              style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;"
+            >
+              <a href="#" style="color: #fff;">Colophon</a>
+            </li>
+            <li
+              class="d-md-inline-block d-block mb-4"
+              style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;"
+            >
+              <a href="#" style="color: #fff;">Cookie statement</a>
+            </li>
+            <li
+              class="d-md-inline-block d-block"
+              style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;"
+            >
+              <a href="#" style="color: #fff;">Bug Bounty</a>
+            </li>
+          </ul>
+        </div>
+        <p
+          style="font-size: 13px; font-weight: 400; color: #fff;"
+          class="text-center"
+        >
+          &copy; 2020 Lieferando.de
+        </p>
+      </div>
+    </footer>
+    <!-- Footer ends -->
+
+    <!-- jQuery -->
+    <script src="./res/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="./res/js/jquery.waypoints.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./res/bootstrap.bundle.js"></script>
+    <!-- FontAwesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/2def6b71ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JS -->
+    <script src="./res/js/index.js"></script>
+    <script src="./res/js/myscroller.js"></script>
+    <script src="./res/js/myswiper.js"></script>
+  </body>
+</html>

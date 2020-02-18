@@ -25,22 +25,22 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar bg-transparent px-3 py-3 align-items-center">
+    <nav class="navbar bg-transparent px-4 py-3 align-items-center justify-content-between">
         <a href="./index.html" class="navbar-brand d-none d-md-inline">
-            <img src="./res/img/lieferando.svg" alt="logo" class="img-fluid logo" width="190">
+            <img src="./res/img/lieferando.svg" alt="logo" class="img-fluid logo" width="165">
         </a>
         <a href="./index.html" class="navbar-brand d-md-none d-inline">
             <img src="./res/img/small-logo.png" alt="logo" class="img-fluid" style="width: 40px !important;">
         </a>
 
         <!-- Address Modal Toggler -->
-        <button type="button" href="#myModal3" role="button" class="address-btn mx-auto" data-toggle="modal">
-            Heerenberg im Gau, 71083
-        </button>
+            <button type="button" href="#myModal3" role="button" class="address-btn" data-toggle="modal">
+                Heerenberg im Gau, 71083
+            </button>
         <!-- Address Modal Toggler ends -->
 
         <!-- Language dropdown -->
-        <div class="nav-wrapper d-md-block d-none ml-auto mr-4 mt-2">
+        <div class="nav-wrapper d-lg-block d-none ml-auto mr-4 mt-2">
             <div class="sl-nav bg-white p-1 rounded-circle">
                 <ul>
                     <li><i class="sl-flag flag-usa" aria-hidden="true"></i>
@@ -193,6 +193,39 @@
         </div>
         <!-- Login Modal ends -->
 
+        <!-- Product Info Modal -->
+        <div id="productInfo" class="modal modal-child" data-backdrop-limit="1" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true" data-modal-parent="#myModal">
+            <div class="modal-dialog modal-dialog-centered mx-auto my-modal">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="modal-title">More product information</h4>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="product-h">LMIV - Allergen</h5>
+                                <ul class="info-list">
+                                    <li class="list-item">Contains cereals and products thereof containing gluten</li>
+                                    <li class="list-item">Contains eggs and products thereof</li>
+                                    <li class="list-item">Contains milk and products thereof (including lactose)</li>
+                                </ul>
+                                <p class="product-p">Please contact <a href="#">Customer service</a> in case you have allergies or intolerances.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Info Modal ends -->
+
         <!-- Signup Modal -->
         <div id="signModal" class="modal modal-child" data-backdrop-limit="1" tabindex="-1" role="dialog"
             aria-labelledby="myModalLabel" aria-hidden="true" data-modal-parent="#myModal">
@@ -329,9 +362,6 @@
                                     <i class="fas fa-map-marker-alt fa-1x pin p-3 align-self-center"></i>
                                     <input type="text" class="form-control address-form"
                                         placeholder="Enter address here">
-                                    <div class="input-group-prepend">
-                                        <span class="btn btn-primary btn-lg font-weight-bold">Show</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -371,14 +401,14 @@
                         <div class="tab-content">
                             <!-- Reviews tab -->
                             <div id="reviews" class="tab-pane active">
-                                <div class="container-fluid mb-2 p-4"
+                                <div class="container-fluid p-4"
                                     style="background-color: #0f3947; width: 100%; margin-top: -18px;">
                                     <div class="row align-items-center">
                                         <div class="col-12 mb-3">
-                                            <h6 class="font-weight-bold text-white">Overall score</h6>
+                                            <h6 class="font-weight-bold text-white" style="font-size: 17px;">Overall score</h6>
                                         </div>
                                         <div class="col-md-2 col-3">
-                                            <h2 class="font-weight-bold text-white">4.5</h2>
+                                            <h2 class="font-weight-bold text-white" style="font-size: 35px;">4.5</h2>
                                         </div>
                                         <div class="col-md-10 col-9 border-left">
                                             <i class="fas fa-star star" style="color: #f37f36;"></i>
@@ -391,15 +421,15 @@
                                     </div>
                                 </div>
                                 <div class="container p-4">
-                                    <div class="row mb-3 p-4" style="background-color: #f8f5f2;">
+                                    <div class="row mb-3 pt-4 pr-2" style="background-color: #f8f5f2;">
                                         <div class="col-12">
-                                            <p style="font-size: 14px; font-weight: 600; color: #f37f36;">Anonymous</p>
-                                            <p style="font-size: 12px; margin-top: -15px;">Thursday, 30 January 2020</p>
+                                            <p style="font-size: 12px; font-weight: 600; color: #f37f36;">Anonymous</p>
+                                            <p style="font-size: 12px; margin-top: -2.4rem;">Thursday, 30 January 2020</p>
                                         </div>
                                         <div class="col-6">
-                                            <p style="font-size: 14px; font-weight: 600; color: #000;">Food</p>
+                                            <p style="font-size: 12px; font-weight: 600; color: #000;">Food</p>
                                         </div>
-                                        <div class="col-6 text-right">
+                                        <div class="col-6 text-right" style="margin-top: -1rem;">
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
@@ -407,25 +437,25 @@
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                         </div>
                                         <div class="col-6">
-                                            <p style="font-size: 14px; font-weight: 600; color: #000;">Delivery</p>
+                                            <p style="font-size: 14px; font-weight: 600; color: #000; margin-top: -2.4rem;">Delivery</p>
                                         </div>
-                                        <div class="col-6 text-right">
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
+                                        <div class="col-6 text-right pb-3" style="margin-top: -1.4rem;">
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
                                         </div>
                                     </div>
-                                    <div class="row mb-3 p-4" style="background-color: #f8f5f2;">
+                                    <div class="row mb-3 pt-4 pr-2" style="background-color: #f8f5f2;">
                                         <div class="col-12">
-                                            <p style="font-size: 14px; font-weight: 600; color: #f37f36;">Anonymous</p>
-                                            <p style="font-size: 12px; margin-top: -15px;">Thursday, 30 January 2020</p>
+                                            <p style="font-size: 12px; font-weight: 600; color: #f37f36;">Anonymous</p>
+                                            <p style="font-size: 12px; margin-top: -2.4rem;">Thursday, 30 January 2020</p>
                                         </div>
                                         <div class="col-6">
-                                            <p style="font-size: 14px; font-weight: 600; color: #000;">Food</p>
+                                            <p style="font-size: 12px; font-weight: 600; color: #000;">Food</p>
                                         </div>
-                                        <div class="col-6 text-right">
+                                        <div class="col-6 text-right" style="margin-top: -1rem;">
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
@@ -433,25 +463,25 @@
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                         </div>
                                         <div class="col-6">
-                                            <p style="font-size: 14px; font-weight: 600; color: #000;">Delivery</p>
+                                            <p style="font-size: 14px; font-weight: 600; color: #000; margin-top: -2.4rem;">Delivery</p>
                                         </div>
-                                        <div class="col-6 text-right">
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
+                                        <div class="col-6 text-right pb-3" style="margin-top: -1.4rem;">
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
                                         </div>
                                     </div>
-                                    <div class="row mb-3 p-4" style="background-color: #f8f5f2;">
+                                    <div class="row mb-3 pt-4 pr-2" style="background-color: #f8f5f2;">
                                         <div class="col-12">
-                                            <p style="font-size: 14px; font-weight: 600; color: #f37f36;">Anonymous</p>
-                                            <p style="font-size: 12px; margin-top: -15px;">Thursday, 30 January 2020</p>
+                                            <p style="font-size: 12px; font-weight: 600; color: #f37f36;">Anonymous</p>
+                                            <p style="font-size: 12px; margin-top: -2.4rem;">Thursday, 30 January 2020</p>
                                         </div>
                                         <div class="col-6">
-                                            <p style="font-size: 14px; font-weight: 600; color: #000;">Food</p>
+                                            <p style="font-size: 12px; font-weight: 600; color: #000;">Food</p>
                                         </div>
-                                        <div class="col-6 text-right">
+                                        <div class="col-6 text-right" style="margin-top: -1rem;">
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
@@ -459,14 +489,14 @@
                                             <i class="fas fa-star star1" style="color: #f37f36;"></i>
                                         </div>
                                         <div class="col-6">
-                                            <p style="font-size: 14px; font-weight: 600; color: #000;">Delivery</p>
+                                            <p style="font-size: 14px; font-weight: 600; color: #000; margin-top: -2.4rem;">Delivery</p>
                                         </div>
-                                        <div class="col-6 text-right">
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
-                                            <i class="fas fa-star star1" style="color: #f37f36;"></i>
+                                        <div class="col-6 text-right pb-3" style="margin-top: -1.4rem;">
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
+                                            <i class="fas fa-star star1" style="color: #f37f36; margin-top: -2.4rem;"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -474,8 +504,8 @@
                             <!-- Reviews tab ends -->
                             <!-- Info tab -->
                             <div id="info" class="tab-pane">
-                                <div
-                                    style="height: 300px; background: url(./res/img/map.png) center /cover no-repeat; margin-top: -20px;">
+                                <div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5710064952273!2d8.076955115302928!3d50.74644507387427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc186e9ba0a223%3A0x6a79ca7f91176277!2sAgentur%20f%C3%BCr%20Arbeit%20Burbach!5e0!3m2!1sen!2s!4v1582018821947!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" class="map"></iframe>
                                 </div>
                                 <div class="container-fluid">
                                     <div class="row mt-4 align-items-center">
@@ -673,41 +703,41 @@
     <!-- Sidebar -->
     <div class="sidenav d-lg-block d-none" id="sidebar">
         <div class="container-fluid">
-            <div class="row py-2 border-bottom">
+            <div class="row py-1" style="margin-top: -10px; border-bottom: 1px solid #eee;">
                 <div class="col-12 text-center">
-                    <h6>Basket</h6>
+                    <h6 style="font-size: 14px; font-weight: 600; color: rgb(102, 102, 102);">Basket</h6>
                 </div>
             </div>
-            <div class="row py-4 text-center border-bottom">
-                <div class="col-12 my-4">
+            <div class="row pt-3 pr-2 text-center" style="border-bottom: 1px solid #eee; width: 360px;">
+                <div class="col-12 mt-4">
                     <i class="fas fa-shopping-bag fa-2x mb-4" style="color: #d7d7d7;"></i>
                     <p style="font-size: .875rem; color: #7d7d7d;">Add some tasty food from the menu and place your
                         order
                     </p>
                 </div>
             </div>
-            <div class="row py-4 border-bottom">
-                <div class="col-6 text-left">
+            <div class="row pt-4 pb-0" style="border-bottom: 1px solid #eee;">
+                <div class="col-6 text-left mb-2" style="font-size: 15px; margin-left: -20px;">
                     <p>Sub-total</p>
                 </div>
-                <div class="col-6 text-right">
-                    <p>0.00 €</p>
+                <div class="col-6 text-right" style="font-size: 15px;">
+                    <p style="margin-right: -30px;">0.00 €</p>
                 </div>
-                <div class="col-6">
+                <div class="col-6" style="margin-top: -20px; margin-left: -20px; font-size: 15px;">
                     <p class="font-weight-bold text-left">Total</p>
                 </div>
-                <div class="col-6">
-                    <p class="font-weight-bold text-right">0.00 €</p>
+                <div class="col-6" style="margin-top: -20px; font-size: 15px;">
+                    <p class="font-weight-bold text-right" style="margin-right: -30px;">0.00 €</p>
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="row" style="width: 340px;">
                 <div class="col-12 text-center">
-                    <p class="text-muted mb-4" style=" font-size: .875rem; color: #7d7d7d;">Sorry, you can't order yet.
+                    <p class="text-muted my-3" style=" font-size: 13px; color: #7d7d7d;">Sorry, you can't order yet.
                         Ria Pizza has set a minimum order amount of
                         10.00
                         € (excl. delivery
                         costs)</p>
-                    <a href="#" class="btn btn-block py-3 w-100 mx-auto text-center disabled"
+                    <a href="#" class="btn btn-block py-3 w-100 mx-auto text-center"
                         style="background-color: #d7d7d7; color: #fff;">Order</a>
                 </div>
             </div>
@@ -721,37 +751,38 @@
     <!-- Header ends -->
 
     <!-- Restaurant Description -->
-    <section class="py-4 px-2 item">
-        <div class="container-fluid">
+    <section class="item my-0">
+        <div class="container hotel-container">
             <div class="restaurant-logo">
                 <div class="row logo-container mx-auto">
                     <div class="col-12 text-center bd-dark logo-inner">
-                        <img src="./res/img/pizza.png" alt="" class="img-fluid" width=100" />
+                        <img src="./res/img/pizza.png" alt="" class="img-fluid" width="100" />
                     </div>
                 </div>
             </div>
             <div class="row align-items-center mb-3">
                 <div class="col-8">
                     <h3 class="heading">Ria Pizza</h3>
-                    <i class="fas fa-star star" style="color: #f37f36;"></i>
-                    <i class="fas fa-star star" style="color: #f37f36;"></i>
-                    <i class="fas fa-star star" style="color: #f37f36;"></i>
-                    <i class="fas fa-star star" style="color: #f37f36;"></i>
-                    <i class="fas fa-star-half-alt star" style="color: #f37f36;"></i>
-                    <a href="#" class="ml-2 reviews" style="color: #f37f36;">( 258 Reviews )</a>
+                    <i class="fas fa-star star fa-sm" style="color: #f37f36;"></i>
+                    <i class="fas fa-star star fa-sm" style="color: #f37f36;"></i>
+                    <i class="fas fa-star star fa-sm" style="color: #f37f36;"></i>
+                    <i class="fas fa-star star fa-sm" style="color: #f37f36;"></i>
+                    <i class="fas fa-star-half-alt star fa-sm" style="color: #f37f36;"></i>
+                    <a href="#" class="ml-2 reviews" style="color: #f37f36;">(258 Reviews)</a>
                 </div>
                 <ul class="list-unstyled text-right ml-auto">
                     <li class="d-inline-block">
-                        <button type="button" href="#infoModal" role="button" class="px-md-4 px-3 py-md-3 py-2 border"
+                        <button type="button" href="#infoModal" role="button" class="border"
                             data-toggle="modal" id="info">
-                            <i class="fas fa-info fa-lg info align-self-center"></i>
+                            <i class="fas fa-info fa-md info align-self-center"></i>
                         </button>
                     </li>
                     <li class="d-inline-block">
-                        <span class="px-md-4 px-3 py-2 py-md-3 border-bottom border-top border-right" id="heart"
-                            style="cursor: pointer;">
-                            <i class="far fa-heart fa-lg heart align-self-center"></i>
-                        </span>
+                        <button type="button" role="button" class="border-left border-top border-bottom
+                        border-right"
+                             id="heart">
+                            <i class="far fa-heart fa-md heart align-self-center"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -769,21 +800,27 @@
     <!-- Dish list -->
     <!-- Swiper -->
     <div class="js-menu-category-bar-sticky sticky-top mr" id="mainNav">
-        <div class="swiper-container">
-            <a href="#" class="swiper-prev left fas fa-angle-left fa-2x"></a>
-            <div class="swiper-wrapper">
-                <a href="#cat1" data-category="1" class="swiper-slide nav-link js-scroll-trigger">Dishes</a>
-                <a href="#cat2" data-category="2" class="swiper-slide nav-link js-scroll-trigger">Dish1</a>
-                <a href="#cat3" data-category="3" class="swiper-slide nav-link js-scroll-trigger">Dish2</a>
-                <a href="#cat4" data-category="4" class="swiper-slide nav-link js-scroll-trigger">Dish3</a>
-                <a href="#cat5" data-category="5" class="swiper-slide nav-link js-scroll-trigger">Dish4</a>
-                <a href="#cat6" data-category="6" class="swiper-slide nav-link js-scroll-trigger">Dish5</a>
-                <a href="#cat7" data-category="7" class="swiper-slide nav-link js-scroll-trigger">Dish6</a>
-                <a href="#cat8" data-category="8" class="swiper-slide nav-link js-scroll-trigger">Dish7</a>
-                <a href="#cat9" data-category="9" class="swiper-slide nav-link js-scroll-trigger">Dish8</a>
-                <a href="#cat10" data-category="10" class="swiper-slide nav-link js-scroll-trigger">Dish9</a>
+        <div class="swiper-container container" style="max-width: 1050px;">
+            <button type="button" onclick="showSearchBar()" class="left fas fa-search fa-1x border-0 bg-transparent" id="search-btn"></button>
+            <div class="swiper-wrapper container" id="dish-list">
+                <a href="#cat1" data-category="1" class="swiper-slide nav-link js-scroll-trigger dishlink">Popular Dishes</a>
+                <a href="#cat2" data-category="2" class="swiper-slide nav-link js-scroll-trigger dishlink">Super&#8208;Sparmenüs</a>
+                <a href="#cat3" data-category="3" class="swiper-slide nav-link js-scroll-trigger dishlink">Salate</a>
+                <a href="#cat4" data-category="4" class="swiper-slide nav-link js-scroll-trigger dishlink">Pizza</a>
+                <a href="#cat5" data-category="5" class="swiper-slide nav-link js-scroll-trigger dishlink">Wunschpizza</a>
+                <a href="#cat6" data-category="6" class="swiper-slide nav-link js-scroll-trigger dishlink">Fleischgerichte</a>
+                <a href="#cat7" data-category="7" class="swiper-slide nav-link js-scroll-trigger dishlink">Burger</a>
+                <a href="#cat8" data-category="8" class="swiper-slide nav-link js-scroll-trigger dishlink">Indisch - Vorspeisen</a>
+                <a href="#cat9" data-category="9" class="swiper-slide nav-link js-scroll-trigger dishlink">Indisch - Hauptgerichte</a>
+                <a href="#cat10" data-category="10" class="swiper-slide nav-link js-scroll-trigger dishlink">Indisch - Biryani</a>
             </div>
-            <a href="#" class="swiper-next right fas fa-angle-right fa-2x"></a>
+            <div class="input-group mb-3" id="search-box">
+                <input type="text" class="form-control" placeholder="Search for meals, etc.." style="border-radius: 0 !important;">
+                <div class="input-group-append">
+                  <button type="button" onclick="hideSearchBar()" class="input-group-text bg-white" id="cross-btn" style="border-radius: 0 !important;"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <a href="#" class="swiper-next right fas fa-angle-right fa-2x mr-3" id="swiper-next"></a>
             <!-- Add Pagination -->
             <div class="swiper-pagination">
             </div>
@@ -794,22 +831,30 @@
     <div class="groups mr">
         <section id="cat1" class="group-item" index="1">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>Popular Dishes</h5>
                     </div>
                 </div>
-                <div class="row mx-md-2 mx-0">
+                <div class="row mx-md-2 mx-0 px-0">
                     <div class="col-12 ml-5 py-3 mx-auto">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                            <a type="button" href="#productInfo" role="button" data-toggle="modal" id="product-info">Product info</a>
+                                        </div>
+                                        <div class="col-6 text-right w-25">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseOne" class="p-0 m-0" aria-expanded="true" aria-controls="collapseOne" id="pluscross">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -858,32 +903,77 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" id="pluscross1" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel"
                                     aria-labelledby="headingOne">
                                     <div class="panel-body align-items-center py-4">
-                                        <div class="container align-items-center">
+                                        <div class="container-fluid align-items-center">
                                             <div class="row">
-                                                <div class="col-8 mt-4 mx-auto">
-                                                    <label class="d-block">
+                                                <div class="col-8 mt-2 mx-auto">
+                                                    <label class="d-block" style="margin-top: -20px; font-size: 12px;">
                                                         lhre Sauce:
                                                     </label>
-                                                    <select class="custom-select mt-2" id="inputGroupSelect01">
-                                                        <option selected>mit Chillisauce</option>
-                                                        <option value="1">mit Ketchup</option>
-                                                        <option value="2">mit Mayonnaise</option>
-                                                        <option value="3">ohne Sauce</option>
-                                                    </select>
-                                                    <p class="m-0 mb-3 p-2">mit Chillisauce <a href="#">Product info</a>
-                                                    </p>
+                                                            <div class="custom-control custom-checkbox mb-2">
+                                                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                                <label class="custom-control-label" for="defaultUnchecked" style="font-size: 12px;">Default unchecked</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox mb-2">
+                                                                <input type="checkbox" class="custom-control-input" id="check1">
+                                                                <label class="custom-control-label" for="check1" style="font-size: 12px;">Default unchecked</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox mb-2">
+                                                                <input type="checkbox" class="custom-control-input" id="check2">
+                                                                <label class="custom-control-label" for="check2" style="font-size: 12px;">Default unchecked</label>
+                                                            </div>
+                                                            <div id="more-checks">
+                                                                <div class="custom-control custom-checkbox mb-2">
+                                                                    <input type="checkbox" class="custom-control-input" id="check3">
+                                                                    <label class="custom-control-label" for="check3" style="font-size: 12px;">Default unchecked</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox mb-2">
+                                                                    <input type="checkbox" class="custom-control-input" id="check4">
+                                                                    <label class="custom-control-label" for="check4" style="font-size: 12px;">Default unchecked</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox mb-2">
+                                                                    <input type="checkbox" class="custom-control-input" id="check5">
+                                                                    <label class="custom-control-label" for="check5" style="font-size: 12px;">Default unchecked</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox mb-2">
+                                                                    <input type="checkbox" class="custom-control-input" id="check6">
+                                                                    <label class="custom-control-label" for="check6" style="font-size: 12px;">Default unchecked</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox mb-2">
+                                                                    <input type="checkbox" class="custom-control-input" id="check7">
+                                                                    <label class="custom-control-label" for="check7" style="font-size: 12px;">Default unchecked</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox mb-2">
+                                                                    <input type="checkbox" class="custom-control-input" id="check8">
+                                                                    <label class="custom-control-label" for="check8" style="font-size: 12px;">Default unchecked</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox mb-2">
+                                                                    <input type="checkbox" class="custom-control-input" id="check8">
+                                                                    <label class="custom-control-label" for="check8" style="font-size: 12px;">Default unchecked</label>
+                                                                </div>
+                                                            </div>
+                                                            <button id="more-btn" onclick="show()" class="more-btn"><i class="fas fa-angle-down mr-3 text-dark"></i>Show 7 More </button>
+                                                            <button id="less-btn" onclick="less()" class="less-btn"><i class="fas fa-angle-up mr-3 text-dark"></i>Show 7 Less </button>
+                                                        <p class="m-0 mb-3 p-2">mit Chillisauce <a href="#">Product info</a>
+                                                        </p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -912,12 +1002,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" id="pluscross2" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -966,22 +1063,29 @@
 
         <section id="cat2" class="group-item" index="2">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
-                    <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
+                    <div class="col-12 ml-5 py-3 mx-auto dish-col">
                         <h5>Dish 1</h5>
                     </div>
                 </div>
-                <div class="row mx-md-2 mx-0">
+                <div class="row mx-md-2 mx-0 mt-4">
                     <div class="col-12 ml-5 py-3 mx-auto">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" id="pluscross3" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1030,12 +1134,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseFive" aria-expanded="true" aria-controls="collapseFive" id="pluscross4" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1084,12 +1195,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseSix" aria-expanded="true" aria-controls="collapseSix" id="pluscross5" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1138,7 +1256,7 @@
 
         <section id="cat3" class="group-item" index="3">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>Dish 2</h5>
                     </div>
@@ -1148,12 +1266,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven" id="pluscross6" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1202,12 +1327,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseEight" aria-expanded="true" aria-controls="collapseEight" id="pluscross7" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1256,12 +1388,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseNine" aria-expanded="true" aria-controls="collapseNine" id="pluscross8" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1310,7 +1449,7 @@
 
         <section id="cat4" class="group-item" index="4">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>Dish 3</h5>
                     </div>
@@ -1320,12 +1459,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTen" aria-expanded="true" aria-controls="collapseTen" id="pluscross9" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1374,12 +1520,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven" id="pluscross10" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1428,12 +1581,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve" id="pluscross11" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg p-3 border" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1482,7 +1642,7 @@
 
         <section id="cat5" class="group-item" index="5">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>Dish 4</h5>
                     </div>
@@ -1492,12 +1652,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapse123" aria-expanded="true" aria-controls="collapse123">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse123" aria-expanded="true" aria-controls="collapse123" id="pluscross12" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1546,13 +1713,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseThirteen" aria-expanded="true"
-                                            aria-controls="collapseThirteen">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen" id="pluscross13" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1601,13 +1774,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseFourteen" aria-expanded="true"
-                                            aria-controls="collapseFourteen">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseFourteen" aria-expanded="true" aria-controls="collapseFourteen" id="pluscross14" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1656,7 +1835,7 @@
 
         <section id="cat6" class="group-item" index="6">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>Dish 5</h5>
                     </div>
@@ -1666,13 +1845,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseFifteen" aria-expanded="true"
-                                            aria-controls="collapseFifteen">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseFifteen" aria-expanded="true" aria-controls="collapseFifteen" id="pluscross15" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1721,13 +1906,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseSixteen" aria-expanded="true"
-                                            aria-controls="collapseSixteen">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseSixteen" aria-expanded="true" aria-controls="collapseSixteen" id="pluscross16" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1776,13 +1967,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseSeventeen" aria-expanded="true"
-                                            aria-controls="collapseSeventeen">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseSeventeen" aria-expanded="true" aria-controls="collapseSeventeen" id="pluscross17" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1831,7 +2028,7 @@
 
         <section id="cat7" class="group-item" index="7">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>
                             Dish 6
@@ -1843,13 +2040,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseEighteen" aria-expanded="true"
-                                            aria-controls="collapseEighteen">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseEighteen" aria-expanded="true" aria-controls="collapseEighteen" id="pluscross18" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1898,13 +2101,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseNineteen" aria-expanded="true"
-                                            aria-controls="collapseNineteen">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseNineteen" aria-expanded="true" aria-controls="collapseNineteen" id="pluscross19" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -1953,12 +2162,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwenty" aria-expanded="true" aria-controls="collapseTwenty">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwenty" aria-expanded="true" aria-controls="collapseTwenty" id="pluscross20" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2007,7 +2223,7 @@
 
         <section id="cat8" class="group-item" index="8">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>Dish 7</h5>
                     </div>
@@ -2017,13 +2233,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentyOne" aria-expanded="true"
-                                            aria-controls="collapseTwentyOne">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentyOne" aria-expanded="true" aria-controls="collapseTwentyOne" id="pluscross21" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2072,13 +2294,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentyTwo" aria-expanded="true"
-                                            aria-controls="collapseTwentyTwo">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentyTwo" aria-expanded="true" aria-controls="collapseTwentyTwo" id="pluscross20" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2127,13 +2355,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentyThree" aria-expanded="true"
-                                            aria-controls="collapseTwentyThree">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentyThree" aria-expanded="true" aria-controls="collapseTwentyThree" id="pluscross23" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2182,7 +2416,7 @@
 
         <section id="cat9" class="group-item" index="9">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>Dish 8</h5>
                     </div>
@@ -2192,13 +2426,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentyFour" aria-expanded="true"
-                                            aria-controls="collapseTwentyFour">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentyFour" aria-expanded="true" aria-controls="collapseTwentyFour" id="pluscross24" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2247,13 +2487,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentyFive" aria-expanded="true"
-                                            aria-controls="collapseTwentyFive">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentyFive" aria-expanded="true" aria-controls="collapseTwentyFive" id="pluscross25" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2302,13 +2548,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentySix" aria-expanded="true"
-                                            aria-controls="collapseTwentySix">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentySix" aria-expanded="true" aria-controls="collapseTwentySix" id="pluscross26" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2357,7 +2609,7 @@
 
         <section id="cat10" class="group-item" index="10">
             <div class="container">
-                <div class="row mx-md-4 mx-1 mt-3">
+                <div class="row mx-md-4 mx-1 mt-3 dish-head">
                     <div class="col-12 ml-5 py-3 mx-auto" style="background-color: #f8f5f2;">
                         <h5>Dish 9</h5>
                     </div>
@@ -2367,13 +2619,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentySeven" aria-expanded="true"
-                                            aria-controls="collapseTwentySeven">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentySeven" aria-expanded="true" aria-controls="collapseTwentySeven" id=" pluscross27" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2422,13 +2680,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentyEight" aria-expanded="true"
-                                            aria-controls="collapseTwentyEight">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentyEight" aria-expanded="true" aria-controls="collapseTwentyEight" id="pluscross28" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2477,13 +2741,19 @@
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel mb-3 panel-default">
                                 <div class="panel-heading border" role="tab" id="headingOne">
-                                    <h5 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwentyNine" aria-expanded="true"
-                                            aria-controls="collapseTwentyNine">
-                                            Some dish
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="panel-title">
+                                                Some dish
+                                            </h5>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseTwentyNine" aria-expanded="true" aria-controls="collapseTwentyNine" id="pluscross29" class="p-0 m-0">
+                                            <i class="fas fa-plus fa-lg border p-3" style="font-weight: 500; color: #1474f5"></i>
                                         </a>
-                                    </h5>
+                                        </div>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                     <h4>8.50 €</h4>
                                 </div>
@@ -2537,166 +2807,37 @@
 
 
     <!-- Footer -->
-    <footer class="footer p-md-4 py-5 mr">
-        <div class="container-fluid">
-            <div class="col-12 text-center my-4">
-                <a href="#">
-                    <img src="./res/img/lieferando.svg" alt="brand logo" class="img-fluid w-50">
-                </a>
+    <footer class="footer pt-4 pl-4 pr-4" style="z-index: 667; position: absolute; left: 0; right: 0;">
+        <div class="container-fluid pt-4">
+            <div class="row justify-content-center align-items-center">
+                <ul style="list-style: none; text-align: center;">
+                    <li class="d-md-inline-block d-block mb-4" style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;">
+                        <a href="#" style="color: #fff;">Recommend a restaurant</a>
+                    </li>
+                    <li class="d-md-inline-block d-block mb-4" style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;">
+                        <a href="#" style="color: #fff;">Signup a restaurant</a>
+                    </li>
+                    <li class="d-md-inline-block d-block mb-4" style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;">
+                        <a href="#" style="color: #fff;">Jobs</a>
+                    </li>
+                    <li class="d-md-inline-block d-block mb-4" style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;">
+                        <a href="#" style="color: #fff;">Terms of use</a>
+                    </li>
+                    <li class="d-md-inline-block d-block mb-4" style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;">
+                        <a href="#" style="color: #fff;">Privacy statement</a>
+                    </li>
+                    <li class="d-md-inline-block d-block mb-4" style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;">
+                        <a href="#" style="color: #fff;">Colophon</a>
+                    </li>
+                    <li class="d-md-inline-block d-block mb-4" style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;">
+                        <a href="#" style="color: #fff;">Cookie statement</a>
+                    </li>
+                    <li class="d-md-inline-block d-block" style="margin-right: 20px; font-size: 13px; font-weight: 400; color: #fff;">
+                        <a href="#" style="color: #fff;">Bug Bounty</a>
+                    </li>
+                </ul>
             </div>
-            <div class="row my-5 d-md-flex d-none">
-                <div class="col-md-3 my-3">
-                    <a href="#" class="text-white font-weight-bold d-block mb-5">Item-1</a>
-                    <a href="#" class="text-white d-block mb-5">link-1</a>
-                    <a href="#" class="text-white d-block mb-5">link-2</a>
-                    <a href="#" class="text-white d-block mb-5">link-3</a>
-                    <a href="#" class="text-white d-block mb-5">link-4</a>
-                </div>
-                <div class="col-md-3 my-3">
-                    <a href="#" class="text-white font-weight-bold d-block mb-5">Item-2</a>
-                    <a href="#" class="text-white d-block mb-5">link-1</a>
-                    <a href="#" class="text-white d-block mb-5">link-2</a>
-                    <a href="#" class="text-white d-block mb-5">link-3</a>
-                    <a href="#" class="text-white d-block mb-5">link-4</a>
-                </div>
-                <div class="col-md-3 my-3">
-                    <a href="#" class="text-white font-weight-bold d-block mb-5">Item-3</a>
-                    <a href="#" class="text-white d-block mb-5">link-1</a>
-                    <a href="#" class="text-white d-block mb-5">link-2</a>
-                    <a href="#" class="text-white d-block mb-5">link-3</a>
-                    <a href="#" class="text-white d-block mb-5">link-4</a>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <a href="#" class="text-white font-weight-bold d-block mb-5">Item-4</a>
-                    <a href="#" class="text-white d-block mb-5">link-1</a>
-                    <a href="#" class="text-white d-block mb-5">link-2</a>
-                    <a href="#" class="text-white d-block mb-5">link-3</a>
-                    <a href="#" class="text-white d-block mb-5">link-4</a>
-                </div>
-            </div>
-            <div class="row d-md-flex d-none">
-                <div class="col-6">
-                    <a href="#" class="text-white font-weight-bold d-block mb-5">Follow us</a>
-                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-facebook fa-2x mr-3"></i>
-                        Facebook</a>
-                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-twitter fa-2x mr-3"></i>
-                        Twitter</a>
-                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-instagram fa-2x mr-3"></i>
-                        Instagram</a>
-                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-youtube fa-2x mr-3"></i>
-                        Youtube</a>
-                </div>
-            </div>
-            <div class="row text-center d-md-none d-flex">
-                <div class="col-12">
-                    <h5 href="#" class="text-white font-weight-bold d-block mb-5">Follow us</h5>
-                </div>
-                <div class="col-3">
-                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-facebook fa-2x mr-3"></i></a>
-                </div>
-                <div class="col-3">
-                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-twitter fa-2x mr-3"></i></a>
-                </div>
-                <div class="col-3">
-                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-instagram fa-2x mr-3"></i></a>
-                </div>
-                <div class="col-3">
-                    <a href="#" class="text-white d-block mb-5"><i class="fab fa-youtube fa-2x mr-3"></i></a>
-                </div>
-            </div>
-            <div class="row d-md-none d-block">
-                <div class="col-12">
-                    <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel my-4">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsef1"
-                                        aria-expanded="true" aria-controls="collapsef1">
-                                        item #1
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapsef1" class="panel-collapse collapse in" role="tabpanel"
-                                aria-labelledby="headingOne">
-                                <div class="panel-body my-4 text-white">
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-1</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-2</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-3</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-4</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of panel -->
-
-                        <div class="panel my-4">
-                            <div class="panel-heading" role="tab" id="headingTwo">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#collapsef2" aria-expanded="false" aria-controls="collapsef2">
-                                        item #2
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapsef2" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingTwo">
-                                <div class="panel-body my-4 text-white">
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-1</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-2</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-3</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-4</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of panel -->
-
-                        <div class="panel my-4">
-                            <div class="panel-heading" role="tab" id="headingThree">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#collapsef3" aria-expanded="false" aria-controls="collapsef3">
-                                        item #3
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapsef3" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingThree">
-                                <div class="panel-body my-4 text-white">
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-1</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-2</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-3</a>
-                                    <a href="#" class="text-white d-block ml-3 mb-5">link-4</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of panel -->
-
-                        <div class="panel my-4">
-                            <div class="panel-heading" role="tab" id="headingFour">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#collapsef4" aria-expanded="false" aria-controls="collapsef4">
-                                        item #4
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapsef4" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingFour">
-                                <div class="panel-body my-4 text-white">
-                                    <a href="#" class="text-white ml-3 d-block mb-5">link-1</a>
-                                    <a href="#" class="text-white ml-3 d-block mb-5">link-2</a>
-                                    <a href="#" class="text-white ml-3 d-block mb-5">link-3</a>
-                                    <a href="#" class="text-white ml-3 d-block mb-5">link-4</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of panel -->
-
-                    </div>
-                    <!-- end of #accordion -->
-
-                </div>
-                <!-- end of wrap -->
-            </div>
+            <p style="font-size: 13px; font-weight: 400; color: #fff;" class="text-center mt-1">&copy; 2020 Lieferando.de</p>
         </div>
     </footer>
     <!-- Footer ends -->
@@ -2704,18 +2845,18 @@
 
 
     <!-- jQuery -->
-    <script src="./res/jquery-3.4.1.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" type="text/javascript"></script>
-    <script src="./res/js/jquery.waypoints.js" type="text/javascript"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js" type="text/javascript"></script>
+    <script src="./res/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="./res/js/jquery.waypoints.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="./res/bootstrap.bundle.js" type="text/javascript"></script>
+    <script src="./res/bootstrap.bundle.js"></script>
     <!-- FontAwesome Icons -->
-    <script src="https://kit.fontawesome.com/2def6b71ee.js" crossorigin="anonymous" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/2def6b71ee.js" crossorigin="anonymous"></script>
     <!-- Custom JS -->
-    <script src="./res/js/index.js" type="text/javascript"></script>
-    <script src="./res/js/myscroller.js" type="text/javascript"></script>
-    <script src="./res/js/myswiper.js" type="text/javascript"></script>
+    <script src="./res/js/index.js"></script>
+    <script src="./res/js/myscroller.js"></script>
+    <script src="./res/js/myswiper.js"></script>
 </body>
 
 </html>

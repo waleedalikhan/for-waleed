@@ -1,6 +1,6 @@
 // ? Navbar
 .navbar {
-  background: #f37f36 !important;
+  background: #fd7f00 !important;
   // * Language Dropdown
   .nav-wrapper {
     text-align: center;
@@ -270,6 +270,48 @@
   }
   // * Login Modal ends
 
+  // ? Product Info Modal
+  #productInfo {
+    .my-modal {
+      width: $modal-width;
+      .modal-content {
+        padding: 3px 20px;
+        .modal-header {
+          .modal-title {
+            font-size: 23px !important;
+            font-weight: 600;
+            letter-spacing: 0 !important;
+            color: rgb(10, 56, 71);
+            margin-bottom: 2rem;
+          }
+        }
+        .modal-body {
+          .product-h {
+            font-size: 16px;
+            font-weight: 600;
+            color: rgb(10, 56, 71);
+          }
+          .info-list {
+            margin-left: -20px;
+            margin-bottom: 2.5rem;
+            .list-item {
+              font-size: 13px;
+              line-height: 21px;
+              color: rgb(10, 56, 71);
+            }
+          }
+          .product-p {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgb(102, 102, 102);
+            margin-left: -10px;
+          }
+        }
+      }
+    }
+  }
+  // ? Product Info Modal ends
+
   // ! SignUp Modal
   #signModal {
     .my-modal {
@@ -379,6 +421,9 @@
             font-weight: 400;
             line-height: 22.5px;
             color: rgb(10, 56, 71);
+          }
+          .start1 {
+            margin-top: -2.4rem;
           }
         }
       }
@@ -613,6 +658,93 @@
   }
   // ? Modal close toggler ends
 
+  // ? Adress Modal 2
+  #address2Modal {
+    .my-modal {
+      width: 38%;
+      .modal-content {
+        background: #fff;
+        border: 0;
+        border-radius: 0;
+        .modal-header {
+          border-radius: 0;
+          background: #f37f36;
+          color: #fff;
+          text-align: center;
+          justify-content: center;
+        }
+        .modal-body {
+          .form-group {
+            .add-label {
+              font-size: 13px !important;
+              color: rgb(102, 102, 102);
+            }
+            .form-control {
+              border-radius: 5px;
+              height: 37px !important;
+              border-color: #999999;
+              margin-bottom: -15px;
+            }
+          }
+          .or {
+            max-width: 600px;
+            position: relative;
+            font-size: 14px;
+            text-align: center;
+            margin: 20px auto;
+            &::before {
+              content: "";
+              display: block;
+              width: 45%;
+              height: 1px;
+              background: #e7e7e7;
+              position: absolute;
+              left: 0;
+              top: 50%;
+            }
+            &::after {
+              content: "";
+              display: block;
+              width: 45%;
+              height: 1px;
+              background: #e7e7e7;
+              position: absolute;
+              right: 0;
+              top: 50%;
+            }
+          }
+          .caption {
+            font-size: 14px;
+            margin-top: 10px;
+            a {
+              text-decoration: none;
+            }
+          }
+          .create-btn {
+            border-radius: 0;
+            transition: all ease-in-out 0.4s;
+            &:hover {
+              background: #14a;
+            }
+          }
+          .link {
+            color: #144;
+            text-decoration: none;
+            &:hover {
+              color: #17f;
+            }
+          }
+        }
+        .pass-link {
+          text-align: center !important;
+          text-decoration: none;
+          color: $primary-bg;
+        }
+      }
+    }
+  }
+  // ? Adress Modal 2 ends
+
   // ! Navbar Modal
 }
 
@@ -634,7 +766,7 @@
 
 @media only screen and (max-width: 360px) {
   .navbar {
-    padding: 30px 10px !important;
+    padding: 10px 10px !important;
     position: relative !important;
     .img-fluid {
       width: 150px !important;
@@ -669,6 +801,9 @@
 }
 
 @media only screen and (max-width: 320px) {
+  .navbar {
+    padding: 10px 10px !important;
+  }
   #infoModal {
     .star1 {
       font-size: 5px !important;
